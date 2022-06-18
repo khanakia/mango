@@ -1,0 +1,55 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn wire
+
+PATH: 
+  /Users/khanakia/Downloads/widevine-dl-1.1.1:/Users/khanakia/.poetry/bin:/usr/local/opt/mongodb-community@4.2/bin:/Users/khanakia/.composer/vendor/bin:/Users/khanakia/.deno/bin:/usr/local/opt/php@7.4/sbin:/usr/local/opt/php@7.4/bin:/usr/local/opt/mysql@5.7/bin:/Users/khanakia/.asdf/shims:/Users/khanakia/.asdf/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/khanakia/.asdf/shims:/Users/khanakia/D1/elixir/bin:/Users/khanakia/Library/Python/3.9/bin:/Users/khanakia/.poetry/bin:/Users/khanakia/.asdf/shims:/Users/khanakia/.asdf/bin:/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/go/bin:/Library/Apple/usr/bin:/Users/khanakia/.asdf/shims:/Users/khanakia/D1/elixir/bin:/Users/khanakia/Library/Python/3.9/bin:/usr/local/go/bin:/Users/khanakia/go/bin:/Applications/Postgres.app/Contents/Versions/14/bin
+
+Yarn version: 
+  1.22.11
+
+Node version: 
+  16.13.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  SyntaxError: /Users/khanakia/D1/www/projects/jeoga/mango/package.json: Unexpected token } in JSON at position 305
+      at JSON.parse (<anonymous>)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/local/lib/node_modules/yarn/lib/cli.js:310:30)
+      at /usr/local/lib/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "mango",
+    "version": "1.0.0",
+    "scripts": {
+      "start": "air",
+      "start:nm": "nodemon -L --signal SIGTERM --exec 'go' run . server",
+      "cmd:migrate": "go run . plugin migratedb",
+      "wire": "cd wireapp && wire",
+      "gql": "cd apigql && go run github.com/99designs/gqlgen generate",
+    },
+    "nodemonConfig": {
+      "ignore": [
+        ".git",
+        "node_modules/**/node_modules"
+      ],
+      "verbose": false,
+      "ext": "js,go",
+      "watch": [
+        "./"
+      ]
+    },
+    "dependencies": {
+      "nodemon": "^2.0.12"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
